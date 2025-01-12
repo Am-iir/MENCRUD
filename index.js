@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 
-app.use(express.json());
+app.use(express.json()); //handles json
+app.use(express.urlencoded({extended:false})); //handles form data
 
 // Using Node.js `require()`
 const mongoose = require('mongoose');
